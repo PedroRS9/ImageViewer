@@ -27,23 +27,9 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     public void paint(Graphics g) {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
-        Resizer resizer = new Resizer(new Dimension(this.getWidth(), this.getHeight()));
-        Dimension resized = resizer.resize(new Dimension(bitmap.getWidth(), bitmap.getHeight()));
         int x = (this.getWidth() - bitmap.getWidth()) / 2;
         int y = (bitmap.getHeight() - bitmap.getHeight()) / 2;
         g.drawImage(bitmap, x, y, null);
-    }
-
-    public static class Resizer {
-        private final Dimension dimension;
-
-        public Resizer(Dimension dimension) {
-            this.dimension = dimension;
-        }
-
-        public Dimension resize(Dimension dimension) {
-            return null;
-        }
     }
 
     private BufferedImage load(String name) {

@@ -1,6 +1,5 @@
 package software.ulpgc.imageviewer;
 
-import java.awt.*;
 
 public class NextImageCommand implements Command {
     private final ImageDisplay imageDisplay;
