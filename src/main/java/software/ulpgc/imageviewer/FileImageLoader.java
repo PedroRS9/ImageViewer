@@ -28,6 +28,7 @@ public class FileImageLoader implements ImageLoader{
                 return files != null ? files[i].getAbsolutePath() : null;
             }
 
+
             @Override
             public Image next() {
                 if (files != null) {
